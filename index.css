@@ -758,52 +758,38 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 
-/* 活動精彩花絮 Gallery */
-.gallery-grid {
+/* 活動精彩花絮 Plain Photo Grid */
+.photo-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
-.gallery-item {
-  position: relative;
+.photo-card {
+  background: #FFFFFF;
   border-radius: var(--border-radius-md);
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-  cursor: pointer;
+  border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
-  background: #E8ECE9;
-}
-
-.gallery-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition-normal);
-}
-
-.gallery-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(180deg, transparent 0%, rgba(26, 45, 38, 0.85) 100%);
+  overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+}
+
+.photo-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-caption {
   padding: 0.75rem 1rem;
-  opacity: 1;
-  transition: var(--transition-normal);
-}
-
-.gallery-item:hover .gallery-img {
-  transform: scale(1.05);
-}
-
-.gallery-caption {
-  color: #FFFFFF;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  color: var(--primary-dark);
+  text-align: center;
+  background: #FAF8F5;
+  border-top: 1px solid var(--border-color);
 }
 
 /* 講義下載專區 Download Center */
