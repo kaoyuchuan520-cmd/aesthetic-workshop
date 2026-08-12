@@ -1168,3 +1168,93 @@ h1, h2, h3, h4 {
     gap: 0.5rem;
   }
 }
+
+
+/* 歷史演進互動時光軸 Stepper & Tab Content */
+.history-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 850px;
+  margin: 0 auto 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.stepper-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition-normal);
+  flex: 1;
+}
+
+.step-circle {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #D8D2C9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  color: var(--text-muted);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-normal);
+  margin-bottom: 0.6rem;
+}
+
+.stepper-step:hover .step-circle {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.stepper-step.active .step-circle {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(45, 90, 76, 0.35);
+  transform: scale(1.1);
+}
+
+.step-label {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  margin-bottom: 0.15rem;
+  transition: var(--transition-normal);
+}
+
+.stepper-step.active .step-label {
+  color: var(--primary-dark);
+}
+
+.step-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.stepper-line {
+  height: 2px;
+  background: #E2DDD5;
+  flex: 1;
+  margin: 0 0.5rem 1.8rem 0.5rem;
+  transition: var(--transition-normal);
+}
+
+.history-tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.history-tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
