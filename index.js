@@ -6,7 +6,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initAgendaTabs();
-  initGalleryLightbox();
   initCounters();
 });
 
