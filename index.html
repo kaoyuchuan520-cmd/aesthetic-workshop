@@ -255,167 +255,72 @@
     </div>
   </section>
 
-    <!-- 課程行程與詳細表單 Agenda Section -->
+      <!-- 課程行程與主題總覽 Agenda Section (極簡精捷版面) -->
   <section class="section section-light" id="agenda">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Workshop Schedule (1.5 Days)</span>
-        <h2 class="section-title">研習課程行程表 (精簡對照)</h2>
-        <p class="section-desc">請點擊以下場次頁籤，查看各場次講題、精準時間安排與研習流程。</p>
+        <span class="section-tag">Workshop Sessions (1.5 Days)</span>
+        <h2 class="section-title">研習場次與核心講題總覽</h2>
+        <p class="section-desc">本次工作坊共規劃 3 大核心場次（全程參與採計 9 小時），內容涵蓋 SEL 心理適應、大腦修復與舌尖色彩科學。</p>
       </div>
 
-      <!-- 頁籤切換 -->
-      <div class="agenda-tabs">
-        <button class="tab-btn active" data-tab="session-1">
-          <i class="fa-solid fa-heart-pulse"></i> 第一場 (8/5 上午)：SEL心理適應
-        </button>
-        <button class="tab-btn" data-tab="session-2">
-          <i class="fa-solid fa-brain"></i> 第二場 (8/6 上午)：大腦修復練習
-        </button>
-        <button class="tab-btn" data-tab="session-3">
-          <i class="fa-solid fa-lemon"></i> 第三場 (8/6 下午)：舌尖色彩與科學
-        </button>
-      </div>
+      <!-- 3 大場次精簡卡片網格 (3-Column Grid) -->
+      <div class="session-card-grid">
 
-      <!-- 第一場內容 -->
-      <div class="tab-content active" id="session-1">
-        <div class="compact-agenda-card">
-          <div class="compact-agenda-header">
-            <div>
-              <h3 class="compact-agenda-topic">【向內安頓與向外引動】藝術教師的 SEL 心理適應課</h3>
-              <p class="compact-agenda-speaker"><i class="fa-solid fa-user-doctor"></i> 主講人：吳佳璇 醫師（精神科主治醫師 / 金鼎獎作家）</p>
-            </div>
-            <div class="timeline-time-badge"><i class="fa-regular fa-clock"></i> 8月5日(三) 09:00 - 12:30</div>
+        <!-- 第一場 -->
+        <div class="session-card">
+          <div class="session-card-header">
+            <span class="session-badge badge-sel"><i class="fa-solid fa-heart-pulse"></i> 第一場</span>
+            <div class="session-time"><i class="fa-regular fa-clock"></i> 8月5日(三) 09:00 - 12:30</div>
           </div>
-
-          <div class="compact-table-wrap">
-            <table class="compact-agenda-table">
-              <thead>
-                <tr>
-                  <th style="width: 140px;">時間</th>
-                  <th>課程單元與內容說明</th>
-                  <th style="width: 200px;">主持人 / 地點</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span class="badge-time">08:00 - 08:40</span></td>
-                  <td><strong>學員報到與領取研習資料</strong></td>
-                  <td><i class="fa-solid fa-location-dot"></i> 嘉義市大同國小大同樓5F</td>
-                </tr>
-                <tr>
-                  <td><span class="badge-time">08:50 - 09:00</span></td>
-                  <td><strong>長官致詞與研習開幕式</strong></td>
-                  <td>課程督學 / 楊宗明校長</td>
-                </tr>
-                <tr>
-                  <td><span class="badge-time">09:00 - 10:30</span></td>
-                  <td><strong>【向內安頓】凝視內在冰山：照顧者的心理適應</strong><br><small style="color:var(--text-muted);">剖析「大照顧時代」下教師兼具教導者與照顧者之雙重壓力，實踐薩提爾冰山模式與內在覺察。</small></td>
-                  <td>吳佳璇 醫師</td>
-                </tr>
-                <tr>
-                  <td><span class="badge-time">10:40 - 12:10</span></td>
-                  <td><strong>【向外引動】重塑生命韌性：從壓力中綻放的 SEL 調適學</strong><br><small style="color:var(--text-muted);">情緒韌性培養與心理調適技巧，轉化為陪伴學生與親師溝通之穩定能量。</small></td>
-                  <td>吳佳璇 醫師</td>
-                </tr>
-                <tr>
-                  <td><span class="badge-time">12:10 - 12:30</span></td>
-                  <td><strong>綜合座談與專業交流回饋</strong></td>
-                  <td>藝術領域輔導團隊</td>
-                </tr>
-              </tbody>
-            </table>
+          <h3 class="session-title">【向內安頓與向外引動】藝術教師的 SEL 心理適應課</h3>
+          <div class="session-speaker">
+            <i class="fa-solid fa-user-doctor"></i> 主講人：吳佳璇 醫師（精神科主治醫師 / 作家）
+          </div>
+          <p class="session-desc">
+            剖析「大照顧時代」下教師兼具教導者與照顧者之雙重壓力，實踐薩提爾冰山模式與情緒韌性培養，轉化為陪伴學生與親師溝通之穩定能量。
+          </p>
+          <div class="session-footer">
+            <span class="session-loc"><i class="fa-solid fa-location-dot"></i> 嘉義市大同國小大同樓5F</span>
           </div>
         </div>
-      </div>
 
-      <!-- 第二場內容 -->
-      <div class="tab-content" id="session-2">
-        <div class="compact-agenda-card">
-          <div class="compact-agenda-header">
-            <div>
-              <h3 class="compact-agenda-topic">藝術本位跨科際課程：沉睡智慧美學_大腦與身體的修復練習</h3>
-              <p class="compact-agenda-speaker"><i class="fa-solid fa-graduation-cap"></i> 主講人：李俊儀 教授（國立臺北大學主任 / SOIL心法創始人）</p>
-            </div>
-            <div class="timeline-time-badge"><i class="fa-regular fa-clock"></i> 8月6日(四) 09:00 - 12:30</div>
+        <!-- 第二場 -->
+        <div class="session-card">
+          <div class="session-card-header">
+            <span class="session-badge badge-brain"><i class="fa-solid fa-brain"></i> 第二場</span>
+            <div class="session-time"><i class="fa-regular fa-clock"></i> 8月6日(四) 09:00 - 12:30</div>
           </div>
-
-          <div class="compact-table-wrap">
-            <table class="compact-agenda-table">
-              <thead>
-                <tr>
-                  <th style="width: 140px;">時間</th>
-                  <th>課程單元與內容說明</th>
-                  <th style="width: 200px;">主持人 / 地點</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span class="badge-time">08:00 - 08:40</span></td>
-                  <td><strong>學員報到與舒心迎賓茶水</strong></td>
-                  <td><i class="fa-solid fa-mug-hot"></i> 嘉義市大同國小大同樓5F</td>
-                </tr>
-                <tr>
-                  <td><span class="badge-time">09:00 - 10:30</span></td>
-                  <td><strong>沉睡智慧美學 (一)：大腦生理與睡眠密碼解碼</strong><br><small style="color:var(--text-muted);">結合腦科學與藝術感官，解密睡眠波形、記憶鞏固與大腦排毒修復機制。</small></td>
-                  <td>李俊儀 教授</td>
-                </tr>
-                <tr>
-                  <td><span class="badge-time">10:40 - 12:10</span></td>
-                  <td><strong>沉睡智慧美學 (二)：身體修復實踐與課堂轉化</strong><br><small style="color:var(--text-muted);">如何將大腦修復科學轉化為學生聽得懂的教學素材與課堂生活習慣引導。</small></td>
-                  <td>李俊儀 教授</td>
-                </tr>
-                <tr>
-                  <td><span class="badge-time">12:10 - 12:30</span></td>
-                  <td><strong>綜合座談與腦科學課程融入討論</strong></td>
-                  <td>楊宗明校長 / 輔導團隊</td>
-                </tr>
-              </tbody>
-            </table>
+          <h3 class="session-title">沉睡智慧美學：大腦與身體的修復練習</h3>
+          <div class="session-speaker">
+            <i class="fa-solid fa-graduation-cap"></i> 主講人：李俊儀 教授（臺北大學主任 / SOIL創始人）
+          </div>
+          <p class="session-desc">
+            結合腦科學與藝術感官，解密睡眠波形、記憶鞏固與大腦排毒修復機制，引導如何將大腦修復科學轉化為學生聽得懂的教學素材。
+          </p>
+          <div class="session-footer">
+            <span class="session-loc"><i class="fa-solid fa-location-dot"></i> 嘉義市大同國小大同樓5F</span>
           </div>
         </div>
-      </div>
 
-      <!-- 第三場內容 -->
-      <div class="tab-content" id="session-3">
-        <div class="compact-agenda-card">
-          <div class="compact-agenda-header">
-            <div>
-              <h3 class="compact-agenda-topic">藝術本位跨科際課程：滋養智慧美學_舌尖上的色彩與科學</h3>
-              <p class="compact-agenda-speaker"><i class="fa-solid fa-graduation-cap"></i> 主講人：李俊儀 教授（國立臺北大學主任 / SOIL心法創始人）</p>
-            </div>
-            <div class="timeline-time-badge"><i class="fa-regular fa-clock"></i> 8月6日(四) 13:00 - 17:30</div>
+        <!-- 第三場 -->
+        <div class="session-card">
+          <div class="session-card-header">
+            <span class="session-badge badge-food"><i class="fa-solid fa-lemon"></i> 第三場</span>
+            <div class="session-time"><i class="fa-regular fa-clock"></i> 8月6日(四) 13:00 - 17:30</div>
           </div>
-
-          <div class="compact-table-wrap">
-            <table class="compact-agenda-table">
-              <thead>
-                <tr>
-                  <th style="width: 140px;">時間</th>
-                  <th>課程單元與內容說明</th>
-                  <th style="width: 200px;">主持人 / 地點</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span class="badge-time">13:00 - 14:30</span></td>
-                  <td><strong>滋養智慧美學 (一)：舌尖上的色彩科學與食材感知</strong><br><small style="color:var(--text-muted);">探索彩虹食物、植物色素與身體細胞營養，連結視覺藝術與食材視覺美學。</small></td>
-                  <td>李俊儀 教授</td>
-                </tr>
-                <tr>
-                  <td><span class="badge-time">14:40 - 16:10</span></td>
-                  <td><strong>滋養智慧美學 (二)：原型食物選擇與媒體素養思辨</strong><br><small style="color:var(--text-muted);">結合食品與加工食物之辨識，培養學生對飲食健康與廣告訊息之批判思考。</small></td>
-                  <td>李俊儀 教授</td>
-                </tr>
-                <tr>
-                  <td><span class="badge-time">16:10 - 17:00</span></td>
-                  <td><strong>1.5日研習總結座談與頒證合照儀式</strong><br><small style="color:var(--text-muted);">全程參與核發 9 小時研習時數證明，圓滿賦歸。</small></td>
-                  <td>課程督學 / 輔導團隊</td>
-                </tr>
-              </tbody>
-            </table>
+          <h3 class="session-title">滋養智慧美學：舌尖上的色彩與科學</h3>
+          <div class="session-speaker">
+            <i class="fa-solid fa-graduation-cap"></i> 主講人：李俊儀 教授（臺北大學主任 / SOIL創始人）
+          </div>
+          <p class="session-desc">
+            探索彩虹食物、植物色素與身體細胞營養，連結視覺藝術與食材視覺美學；結合原型食物選擇與媒體素養廣告訊息之批判思考。
+          </p>
+          <div class="session-footer">
+            <span class="session-loc"><i class="fa-solid fa-location-dot"></i> 嘉義市大同國小大同樓5F</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
