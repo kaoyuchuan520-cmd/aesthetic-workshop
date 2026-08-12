@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>嘉義市115學年度「美學教師工作坊」學員專屬研習網頁</title>
+  <meta name="description" content="嘉義市115學年度美學教師工作坊：美感教學理念與實踐。涵蓋SEL心理適應、大腦與身體修復練習、舌尖上的色彩與科學。">
+  
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- 自訂主樣式表 -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- 頂部導覽列 Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="#hero" class="navbar-logo">
+        <span class="logo-badge">美學</span>
+        <span class="logo-text">教師工作坊</span>
+      </a>
+      
+      <button class="nav-mobile-toggle" id="nav-toggle" aria-label="切換選單">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#overview" class="nav-link">發展藍圖</a></li>
+        <li><a href="#history" class="nav-link">歷年事蹟</a></li>
+        <li><a href="#agenda" class="nav-link">課程行程</a></li>
+        <li><a href="#speakers" class="nav-link">名師陣容</a></li>
+        <li><a href="#evaluation" class="nav-link">成效評鑑</a></li>
+        <li><a href="#gallery" class="nav-link">精彩花絮</a></li>
+        <li><a href="#resources" class="nav-link">講義下載</a></li>
+        <li><a href="#location" class="nav-link">交通指引</a></li>
+        <li><a href="https://forms.gle/zC2kYpeTgAaG314t9" target="_blank" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i> 填寫問卷</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 主視覺首頁 Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-sub">
+          <i class="fa-solid fa-sparkles"></i> 嘉義市115學年度精進國民中小學教師教學專業計畫
+        </div>
+        <h1 class="hero-title">
+          美學教師工作坊
+          <span>美感教學理念與實踐</span>
+        </h1>
+        <p class="hero-tagline">
+          【向內安頓，向外引動】凝視內在冰山，重塑身心韌性；結合腦科學修復與飲食美學，賦能教師全人生命的感官體現。
+        </p>
+        <div class="hero-actions">
+          <a href="#agenda" class="btn btn-primary"><i class="fa-solid fa-calendar-days"></i> 瀏覽課程行程</a>
+          <a href="#resources" class="btn btn-light"><i class="fa-solid fa-file-pdf"></i> 下載吳佳璇醫師 3 份 PDF 講義</a>
+        </div>
+        <div class="hero-meta-list">
+          <div class="hero-meta-item">
+            <h4>研習時間</h4>
+            <p>115.08.05 - 08.06</p>
+          </div>
+          <div class="hero-meta-item">
+            <h4>研習地點</h4>
+            <p>大同國小大同樓5F</p>
+          </div>
+          <div class="hero-meta-item">
+            <h4>研習時數</h4>
+            <p>3場次共 9 小時</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右側亮點資訊卡 -->
+      <div class="hero-card-preview">
+        <div class="hero-card-badge">高滿意度 98%</div>
+        <h3 class="hero-card-title">三大核心轉化主題</h3>
+        <ul class="hero-card-highlights">
+          <li>
+            <i class="fa-solid fa-heart-pulse"></i>
+            <div><strong>SEL 照顧者心理適應：</strong>吳佳璇醫師帶領向內安頓，建立少子化與大照顧時代下的心理韌性。</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-brain"></i>
+            <div><strong>沉睡智慧與大腦修復：</strong>李俊儀教授解析睡眠科學機制，將腦修復轉化為班級經營能量。</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-apple-whole"></i>
+            <div><strong>滋養美學與舌尖科學：</strong>原型食物與色彩營養學跨域連結，啟發生活美學與批判思考。</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 發展藍圖與現況 Overview & 3 Stage Roadmap -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Development Roadmap</span>
+        <h2 class="section-title">美學專業成長具體構思與長期規劃</h2>
+        <p class="section-desc">本工作坊依據國民教育輔導團藝術領域整體發展計畫，分三階段系統化推動教師專業支持與生命轉化。</p>
+      </div>
+
+      <div class="vision-grid">
+        <!-- 階段一 -->
+        <div class="vision-card">
+          <div class="vision-stage-tag">第一階段 112-114學年</div>
+          <h3 class="vision-card-title">奠基與拓展期</h3>
+          <p class="vision-card-desc">【感知與跨域探索】強化美感感知與表達能力；推動初步跨領域學習，打破領域邊界。</p>
+          <ul class="vision-bullets">
+            <li><i class="fa-solid fa-check"></i> 建立系統化專業支持網絡</li>
+            <li><i class="fa-solid fa-check"></i> 協助教師克服創作畏難感</li>
+            <li><i class="fa-solid fa-check"></i> 啟動學員自主學習能力</li>
+          </ul>
+        </div>
+
+        <!-- 階段二（當前） -->
+        <div class="vision-card active">
+          <div class="vision-stage-tag">第二階段 115-117學年（當前重點）</div>
+          <h3 class="vision-card-title">轉化與精進期</h3>
+          <p class="vision-card-desc">【實踐與創新轉化】落實 CC-LEAP 課程模組；推動 SEL 陪伴輔導，提升師生自我覺察與生活安頓。</p>
+          <ul class="vision-bullets">
+            <li><i class="fa-solid fa-check"></i> 身心修復轉化為生活感官體驗</li>
+            <li><i class="fa-solid fa-check"></i> 引導跨學科與設計思維</li>
+            <li><i class="fa-solid fa-check"></i> 深化校內專業學習社群 (PLC)</li>
+          </ul>
+        </div>
+
+        <!-- 階段三 -->
+        <div class="vision-card">
+          <div class="vision-stage-tag">第三階段 118-120學年</div>
+          <h3 class="vision-card-title">創新與提升期</h3>
+          <p class="vision-card-desc">【生命連結與科技】探索藝術與生命深層連結；結合 AI 前瞻科技，開發創新展演平台。</p>
+          <ul class="vision-bullets">
+            <li><i class="fa-solid fa-check"></i> 建立循環整合全人美感模式</li>
+            <li><i class="fa-solid fa-check"></i> 提升教師作為生命引導者</li>
+            <li><i class="fa-solid fa-check"></i> 讓美感成為安頓身心能量</li>
+          </ul>
+        </div>
+  <!-- 承先啟後：美學教師工作坊 96 年～迄今 歷年演進與事蹟 Section -->
+  <section class="section" id="history" style="background: #FAF8F5; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Milestones & Heritage (96年~迄今)</span>
+        <h2 class="section-title">承先啟後：美學教師工作坊歷年演進與輝煌事蹟</h2>
+        <p class="section-desc">回顧自民國96年成立至今的發展歷程，記錄工作坊從特定藝術技能訓練，逐步跨越至全人身心療癒、STEAM跨域與生成式 AI 科技應用的前瞻事蹟。</p>
+      </div>
+
+      <!-- 三大演進時期演進脈絡 -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem;">
+        <!-- 早期階段 -->
+        <div class="history-stage-card">
+          <div class="history-stage-header">
+            <h3 class="history-stage-title">早期階段 (96-99年)</h3>
+            <span class="history-year-badge">技能與實作奠基</span>
+          </div>
+          <div class="history-core-box">
+            <strong>核心關懷：</strong>聚焦特定藝術形式與基礎實作，探索藝術表現手法與課程開發。從傳統手藝與各領域專精技能切入。
+          </div>
+          <ul class="vision-bullets">
+            <li><i class="fa-solid fa-paintbrush"></i> <strong>視覺藝術：</strong>染布研習、兒童畫內心世界（陳哲）、動畫藝術（莊信棠）、鋁雕、藝術精油皂</li>
+            <li><i class="fa-solid fa-masks-theater"></i> <strong>表演藝術：</strong>另類戲偶製作、舞蹈編導、舞台彩妝、說故事劇場（張曉華）</li>
+            <li><i class="fa-solid fa-music"></i> <strong>音樂藝術：</strong>木笛音樂研究、嘉義市教師成長木笛團（劉若蘭）、指揮教學</li>
+            <li><i class="fa-solid fa-lightbulb"></i> <strong>核心概念：</strong>行動研究與當代藝術思潮（劉豐榮）、生活藝術素養（伍鴻沂）</li>
+          </ul>
+        </div>
+
+        <!-- 中期階段 -->
+        <div class="history-stage-card era-mid">
+          <div class="history-stage-header">
+            <h3 class="history-stage-title">中期階段 (100-106年)</h3>
+            <span class="history-year-badge mid">理論與全人社會關懷</span>
+          </div>
+          <div class="history-core-box">
+            <strong>核心關懷：</strong>拓展至藝術理論、當代藝術批評、台灣美術史與公共藝術。102年明訂「全人藝術教育」，納入心理劇、音樂治療與 EFT 情緒療法。
+          </div>
+          <ul class="vision-bullets">
+            <li><i class="fa-solid fa-book-open"></i> <strong>理論美學：</strong>符號學與美學、台灣美術史長廊（蕭瓊瑞）、當代藝術觀察（王德合）</li>
+            <li><i class="fa-solid fa-heart-pulse"></i> <strong>全人與療癒：</strong>全人藝術教育（劉豐榮）、心靈美學-心理劇（游金潾/游淑瑜）、音樂治療（吳幸如）、EFT情緒療法</li>
+            <li><i class="fa-solid fa-people-group"></i> <strong>社會參與：</strong>藝術作為社會雕塑（吳瑪悧）、災後重建經驗談（曾晴賢）、藝術與社群行動對話</li>
+            <li><i class="fa-solid fa-diagram-project"></i> <strong>跨科際導向：</strong>104-105年奠定「藝術本位跨科際問題解決導向課程」（劉淑英、孫棁泰）</li>
+          </ul>
+        </div>
+
+        <!-- 後期與前瞻階段 -->
+        <div class="history-stage-card era-late">
+          <div class="history-stage-header">
+            <h3 class="history-stage-title">近期與前瞻 (107-114年)</h3>
+            <span class="history-year-badge late">核心素養、STEAM與AI前瞻</span>
+          </div>
+          <div class="history-core-box">
+            <strong>核心關懷：</strong>從「藝術是什麼」轉變為「藝術能做什麼」。緊密扣合十二年國教核心素養，深度融合 STEAM、輕科技媒材與生成式 AI 工具。
+          </div>
+          <ul class="vision-bullets">
+            <li><i class="fa-solid fa-compass-drafting"></i> <strong>核心素養：</strong>素養導向教學轉化（劉豐榮、林永豐、伍鴻沂、洪詠善）</li>
+            <li><i class="fa-solid fa-robot"></i> <strong>STEAM與輕科技：</strong>112年牛頓與馬諦斯 STEAM（葉長青）、感應光盒、電能量入門、光映畢卡索、行動顯微、靜電指揮家</li>
+            <li><i class="fa-solid fa-wand-magic-sparkles"></i> <strong>生成式 AI 與數位：</strong>114年融入 NotebookLm AI、Mootion AI 故事繪本、Canva 手繪動畫（呂聰賢）</li>
+            <li><i class="fa-solid fa-seedling"></i> <strong>身心與安頓：</strong>113-114年 SOIL 心法（李俊儀）、SEL 心理適應（吳佳璇）全人生命安頓</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 下載歷年演進完整 PDF -->
+      <div style="background: #FFFFFF; border-radius: var(--border-radius-md); padding: 2rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+        <div style="display: flex; align-items: center; gap: 1.25rem;">
+          <div style="background: rgba(45, 90, 76, 0.1); color: var(--primary-color); width: 55px; height: 55px; border-radius: var(--border-radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.75rem;">
+            <i class="fa-solid fa-file-pdf"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 0.3rem;">美學教師工作坊 96 年～迄今 歷年演進完整紀錄表 PDF</h4>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">收錄自 96 年至 114 年跨越 18 年之完整課程主題、講師名冊與演進分析報告。</p>
+          </div>
+        </div>
+        <a href="pdf/美學教師工作坊歷年辦理演進96迄今.pdf" target="_blank" download class="btn btn-primary">
+          <i class="fa-solid fa-download"></i> 點擊下載完整紀錄表 PDF
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 課程行程與詳細表單 Agenda Section -->
+  <section class="section section-light" id="agenda">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Workshop Schedule</span>
+        <h2 class="section-title">研習課程行程表</h2>
+        <p class="section-desc">請點擊以下場次頁籤，查看各場次講題、時間安排與授課流程。</p>
+      </div>
+
+      <!-- 頁籤切換 -->
+      <div class="agenda-tabs">
+        <button class="tab-btn active" data-tab="session-1">
+          <i class="fa-solid fa-heart-pulse"></i> 第一場 (8/5 上午)：SEL心理適應
+        </button>
+        <button class="tab-btn" data-tab="session-2">
+          <i class="fa-solid fa-brain"></i> 第二場 (8/6 上午)：大腦修復練習
+        </button>
+        <button class="tab-btn" data-tab="session-3">
+          <i class="fa-solid fa-lemon"></i> 第三場 (8/6 下午)：舌尖色彩與科學
+        </button>
+      </div>
+
+      <!-- 第一場內容 -->
+      <div class="tab-content active" id="session-1">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-topic">【向內安頓與向外引動】藝術教師的 SEL 心理適應課</h3>
+              <p class="timeline-speaker"><i class="fa-solid fa-user-doctor"></i> 主講人：吳佳璇 醫師（台大醫學系/墨爾本大學國際心理衛生碩士）</p>
+            </div>
+            <div class="timeline-time-badge"><i class="fa-regular fa-clock"></i> 8月5日(三) 09:00 - 12:30</div>
+          </div>
+
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-time">08:00 - 08:40</div>
+              <div>
+                <div class="timeline-title">學員報到與資料領取</div>
+                <div class="timeline-detail">地點：嘉義市大同國小 大同樓5樓會議室</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">08:50 - 09:00</div>
+              <div>
+                <div class="timeline-title">長官致詞與研習開幕</div>
+                <div class="timeline-detail">主持人：課程督學 / 楊宗明校長（藝術領域召集人）</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">09:00 - 10:30</div>
+              <div>
+                <div class="timeline-title">【向內安頓】凝視內在的冰山：照顧者的心理適應</div>
+                <div class="timeline-detail">剖析「大照顧時代」下教師兼具教導者與照顧者的壓力，探索薩提爾冰山模式。</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">10:40 - 12:10</div>
+              <div>
+                <div class="timeline-title">【向外引動】重塑生命的韌性：從壓力中綻放的 SEL 調適學</div>
+                <div class="timeline-detail">實踐心理調適技巧與情緒韌性培養，轉化為陪伴學生與親師溝通的穩定能量。</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">12:10 - 12:30</div>
+              <div>
+                <div class="timeline-title">綜合座談與回饋分享</div>
+                <div class="timeline-detail">主持：課程督學與藝術領域輔導團隊</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第二場內容 -->
+      <div class="tab-content" id="session-2">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-topic">藝術本位的跨科際課程：沉睡智慧美學_大腦與身體的修復練習</h3>
+              <p class="timeline-speaker"><i class="fa-solid fa-graduation-cap"></i> 主講人：李俊儀 教授（國立臺北大學主任）</p>
+            </div>
+            <div class="timeline-time-badge"><i class="fa-regular fa-clock"></i> 8月6日(四) 09:00 - 12:30</div>
+          </div>
+
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-time">08:00 - 08:40</div>
+              <div>
+                <div class="timeline-title">報到與舒心迎賓茶水</div>
+                <div class="timeline-detail">品嚐精心準備之健康茶點與講師互動</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">09:00 - 10:30</div>
+              <div>
+                <div class="timeline-title">沉睡智慧美學 (一)：大腦生理與睡眠密碼解碼</div>
+                <div class="timeline-detail">結合腦科學與藝術感官，解密睡眠波形、記憶鞏固與大腦排毒修復機制。</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">10:40 - 12:10</div>
+              <div>
+                <div class="timeline-title">沉睡智慧美學 (二)：身體修復實踐與課堂轉化</div>
+                <div class="timeline-detail">如何將大腦修復科學轉化為學生聽得懂的教學素材與課堂生活習慣引導。</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">12:10 - 12:30</div>
+              <div>
+                <div class="timeline-title">綜合座談與互動討論</div>
+                <div class="timeline-detail">藝術領域召集人主持，探討腦科學於藝術課程之融入策略。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第三場內容 -->
+      <div class="tab-content" id="session-3">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-topic">藝術本位的跨科際課程：滋養智慧美學_舌尖上的色彩與科學</h3>
+              <p class="timeline-speaker"><i class="fa-solid fa-graduation-cap"></i> 主講人：李俊儀 教授（國立臺北大學主任）</p>
+            </div>
+            <div class="timeline-time-badge"><i class="fa-regular fa-clock"></i> 8月6日(四) 13:00 - 17:30</div>
+          </div>
+
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-time">13:00 - 14:30</div>
+              <div>
+                <div class="timeline-title">滋養智慧美學 (一)：舌尖上的色彩科學與食材感知</div>
+                <div class="timeline-detail">探索彩虹食物、植物色素與身體細胞營養，連結視覺藝術與食材視覺美學。</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">14:40 - 16:10</div>
+              <div>
+                <div class="timeline-title">滋養智慧美學 (二)：原型食物選擇與媒體素養思辨</div>
+                <div class="timeline-detail">結合食品與加工食物之辨識，培養學生對飲食健康與廣告訊息之批判思考。</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">16:10 - 17:00</div>
+              <div>
+                <div class="timeline-title">1.5日研習總結座談與頒證儀式</div>
+                <div class="timeline-detail">頒發研習時數證明（全程參與給予 9 小時），進行大合照與圓滿賦歸。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 名師陣容 Speakers Section -->
+  <section class="section" id="speakers">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Keynote Lecturers</span>
+        <h2 class="section-title">講座名師陣容</h2>
+        <p class="section-desc">特邀精神科跨域醫師與頂尖大學教授，帶領教師從理論走向身心安頓實踐。</p>
+      </div>
+
+      <div class="speaker-grid">
+        <!-- 吳佳璇 醫師 -->
+        <div class="speaker-card">
+          <div class="speaker-avatar-wrap">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+          <div>
+            <h3 class="speaker-name">吳佳璇 醫師</h3>
+            <div class="speaker-title">遠距精神科主治醫師 / 心理衛生專家 / 金鼎獎作家</div>
+            <p class="speaker-bio">
+              台灣大學醫學系畢業、澳洲墨爾本大學「國際心理衛生」碩士。曾任新光醫院精神科主治醫師、台大醫院精神部兼任主治醫師。長期關注照顧者心理適應、職場壓力調適與情緒韌性。
+            </p>
+          </div>
+          <div class="speaker-quote">
+            「在大照顧時代下，老師們身兼學校教導者與家庭照顧者。照顧別人的前提，是先學會善待自己、向內安頓。」
+          </div>
+          <div style="margin-top: 1rem;">
+            <a href="#wu-materials" class="btn btn-primary btn-sm"><i class="fa-solid fa-file-pdf"></i> 📥 點擊下載吳醫師 3 份 PDF 講義與書單</a>
+          </div>
+        </div>
+
+        <!-- 李俊儀 教授 -->
+        <div class="speaker-card">
+          <div class="speaker-avatar-wrap">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <div>
+            <h3 class="speaker-name">李俊儀 教授</h3>
+            <div class="speaker-title">國立臺北大學主任 / 腦科學與跨領域教學專家</div>
+            <p class="speaker-bio">
+              國立臺北大學教授兼主任，致力於推動藝術與生理科學、大腦認知修復及營養美學的跨科際課程開發。倡導將睡眠科學與原型食物轉化為生命體驗美學。
+            </p>
+          </div>
+          <div class="speaker-quote">
+            「睡眠是大腦修復與記憶鞏固的關鍵密碼，而飲食則是色彩與細胞營養的交響曲。讓科學成為最美的生活養分。」
+          </div>
+          <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <a href="pdf/大腦的睡眠的神奇力量-沉睡的智慧20260301_3hr.pdf" target="_blank" download class="btn btn-outline btn-sm"><i class="fa-solid fa-file-pdf"></i> 📥 下載睡眠講義 PDF</a>
+            <a href="https://www.youtube.com/watch?v=SK-yO3qN-wc" target="_blank" class="btn btn-primary btn-sm" style="background: #E63946; border-color: #E63946; color: white;"><i class="fa-brands fa-youtube"></i> 📺 觀看影音：滋養的智慧</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guskey 成效評鑑 Evaluation & Metrics Section -->
+  <section class="section section-dark" id="evaluation">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Evaluation & Impact</span>
+        <h2 class="section-title">Guskey 評鑑成效與滿意度成果</h2>
+        <p class="section-desc">依據 Guskey 教師專業成長評估模式（Levels 1-4），本工作坊獲得全體參訓教師極高肯定。</p>
+      </div>
+
+      <!-- 量化指標卡片 -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value counter" data-target="98.0" data-unit="%" data-decimals="1">0%</div>
+          <div class="metric-label">Level 1 全體滿意度</div>
+          <div class="metric-sub">4.57 / 5.00 極高讚譽</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value counter" data-target="98.0" data-unit="%" data-decimals="1">0%</div>
+          <div class="metric-label">Level 2 核心概念理解</div>
+          <div class="metric-sub">4.51 / 5.00 理論掌握</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value counter" data-target="93.9" data-unit="%" data-decimals="1">0%</div>
+          <div class="metric-label">Level 3 課堂落實意願</div>
+          <div class="metric-sub">4.41 / 5.00 持續精進</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value counter" data-target="93.9" data-unit="%" data-decimals="1">0%</div>
+          <div class="metric-label">Level 4 學生動機預期</div>
+          <div class="metric-sub">4.39 / 5.00 提升自主學習</div>
+        </div>
+      </div>
+
+      <!-- 質化代表性學員原話 -->
+      <div class="quotes-carousel">
+        <div class="quote-card">
+          <div class="quote-text">
+            「在如今高齡化社會、少子化與教育現場壓力交織的當下，老師們身兼『學校教導者』與『家庭照顧者』的雙重重擔，確實已經正式邁入了『大照顧時代』。照顧別人的前提，是先學會善待自己、向內安頓。」
+          </div>
+          <div class="quote-author">—— 高玉娟 老師（SEL心理適應場次）</div>
+        </div>
+        <div class="quote-card">
+          <div class="quote-text">
+            「謝謝講師精心準備課程內容，讓我對於睡眠有更深的了解與其重要性，過去僅知睡眠影響甚巨，現在知道科學原理，我決定今天開始好好重視睡眠，不再熬夜！」
+          </div>
+          <div class="quote-author">—— 李姿瑩 / 鄭伊伶 老師（大腦修復場次）</div>
+        </div>
+        <div class="quote-card">
+          <div class="quote-text">
+            「先前參與媒體素養相關課程提及食物與食品區隔，今天講師提及身體營養時，剛好能在未來生活中與孩子和家人分享實行。老師們規劃研習講題面向既多元又務實！」
+          </div>
+          <div class="quote-author">—— 蕭韶儀 老師（舌尖色彩科學場次）</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精彩花絮 Photo Gallery Section -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Photo Highlights</span>
+        <h2 class="section-title">研習精彩活動紀錄花絮</h2>
+        <p class="section-desc">點擊下方照片可放大預覽，重溫工作坊熱烈互動與溫暖學習時刻。</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="0805照片/1.jpg" alt="805研習精彩照片1" class="gallery-img" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">SEL心理適應：講師引導現場互動</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="0805照片/2.jpg" alt="805研習精彩照片2" class="gallery-img" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">吳佳璇醫師：照顧者冰山理論解析</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="0805照片/3.jpg" alt="805研習精彩照片3" class="gallery-img" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">學員專注聽講與交流記錄</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="0805照片/4.jpg" alt="805研習精彩照片4" class="gallery-img" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">師長交流會與大合照影留念</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="0806照片/1.jpg" alt="806研習精彩照片1" class="gallery-img" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">李俊儀教授：大腦與身體修復練習</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="0806照片/2.jpg" alt="806研習精彩照片2" class="gallery-img" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">沉睡智慧美學：睡眠波形教學</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="0806照片/3.jpg" alt="806研習精彩照片3" class="gallery-img" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">舌尖上的色彩：原型食物辨識</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="0806照片/4.jpg" alt="806研習精彩照片4" class="gallery-img" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">跨科際課程開發與分組體驗</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 講義與資源下載 Resources Section -->
+  <section class="section section-light" id="resources">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Downloads & Materials</span>
+        <h2 class="section-title">研習講義與資源下載專區</h2>
+        <p class="section-desc">為方便參訓教師進行課後複習與校內教學轉化，提供講師講義 PDF 檔下載與閱讀資源。</p>
+      </div>
+
+      <!-- 吳佳璇醫師 3 份 PDF 專屬下載專區 -->
+      <div id="wu-materials" style="background: #FFFFFF; border-radius: var(--border-radius-lg); padding: 2.5rem; box-shadow: var(--shadow-md); border: 2px solid var(--primary-color); margin-bottom: 3rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+          <div style="background: var(--gradient-accent); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+          <div>
+            <h3 style="color: var(--primary-dark); font-size: 1.5rem;">【吳佳璇醫師】SEL 心理適應與照顧者講義專區 (共 3 份 PDF)</h3>
+            <p style="color: var(--secondary-color); font-weight: 600; font-size: 0.95rem;">點擊下方按鈕即可直接開啟與下載 PDF 檔案</p>
+          </div>
+        </div>
+
+        <div class="resource-grid">
+          <!-- PDF 1: 吳佳璇醫師建議書單 -->
+          <div class="resource-card" style="border-top: 4px solid #D9825B;">
+            <div class="resource-icon" style="background: rgba(217, 130, 91, 0.1); color: #D9825B;">
+              <i class="fa-solid fa-book-bookmark"></i>
+            </div>
+            <div class="resource-info">
+              <h4>1. 吳佳璇醫師提供之建議參考書單</h4>
+              <p>精選「照顧相關」（張曼娟、米奧、平山亮等）與「壓力調適到韌性提升」共 9 本身心靈安頓深度閱讀書單。</p>
+              <a href="pdf/吳佳璇醫生提供之參考書單.pdf" target="_blank" download class="btn btn-primary btn-sm">
+                <i class="fa-solid fa-download"></i> 點擊下載 PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- PDF 2: 感謝你成為照顧者 -->
+          <div class="resource-card" style="border-top: 4px solid #2D5A4C;">
+            <div class="resource-icon" style="background: rgba(45, 90, 76, 0.1); color: #2D5A4C;">
+              <i class="fa-solid fa-file-powerpoint"></i>
+            </div>
+            <div class="resource-info">
+              <h4>2. 感謝你成為照顧者：照顧者的心理調適歷程</h4>
+              <p>完整的 57 頁研習簡報 PDF。涵蓋照顧迷思、失能照顧數據、扶養比分析、喘息咖啡館與照顧歷程四階段。</p>
+              <a href="pdf/感謝你成為照顧者-- 照顧者的心理調適歷程20260805.pdf" target="_blank" download class="btn btn-primary btn-sm">
+                <i class="fa-solid fa-download"></i> 點擊下載 PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- PDF 3: 從壓力調適到全面提升幸福感 -->
+          <div class="resource-card" style="border-top: 4px solid #D4A359;">
+            <div class="resource-icon" style="background: rgba(212, 163, 89, 0.1); color: #D4A359;">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <div class="resource-info">
+              <h4>3. 從壓力調適到提升心理韌性</h4>
+              <p>完整的 44 頁資深身心科醫師分享簡報 PDF。解析戰或逃反應、腦力平衡、職場解毒 5 個練習與 PERMA 幸福理論。</p>
+              <a href="pdf/從壓力調適到全面提升幸福感20260805.pdf" target="_blank" download class="btn btn-primary btn-sm">
+                <i class="fa-solid fa-download"></i> 點擊下載 PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 研習實施計畫與大師課程講義專區 -->
+      <h3 style="color: var(--primary-dark); font-size: 1.3rem; margin-bottom: 1.5rem;">【工作坊實施計畫與李俊儀教授影音講義】</h3>
+      <div class="resource-grid" style="margin-bottom: 2rem;">
+        <!-- 工作坊實施計畫全文 PDF -->
+        <div class="resource-card" style="border-top: 4px solid var(--primary-color);">
+          <div class="resource-icon" style="background: rgba(45, 90, 76, 0.1); color: var(--primary-color);">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <div class="resource-info">
+            <h4>工作坊實施計畫全文 PDF</h4>
+            <p>包含背景分析、三階段發展藍圖與各場次詳細日程。</p>
+            <a href="pdf/美學教師工作坊計畫.pdf" target="_blank" download class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-download"></i> 點擊下載 PDF
+            </a>
+          </div>
+        </div>
+
+        <!-- 李俊儀教授 大腦睡眠講義 PDF -->
+        <div class="resource-card" style="border-top: 4px solid var(--secondary-color);">
+          <div class="resource-icon" style="background: rgba(217, 130, 91, 0.1); color: var(--secondary-color);">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <div class="resource-info">
+            <h4>大腦睡眠的神奇力量：沉睡的智慧 PDF</h4>
+            <p>李俊儀教授授課簡報，解密睡眠波形、記憶鞏固與大腦修復機制。</p>
+            <a href="pdf/大腦的睡眠的神奇力量-沉睡的智慧20260301_3hr.pdf" target="_blank" download class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-download"></i> 點擊下載 PDF
+            </a>
+          </div>
+        </div>
+
+        <!-- 李俊儀教授 YouTube 影音講座 -->
+        <div class="resource-card" style="border-top: 4px solid #E63946;">
+          <div class="resource-icon" style="background: rgba(230, 57, 70, 0.1); color: #E63946;">
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+          <div class="resource-info">
+            <h4>滋養的智慧—飲食塑造最強學習腦 (YouTube 影音)</h4>
+            <p>李俊儀教授影音講座：探索色彩科學、營養感知與如何透過飲食塑造最強學習大腦。</p>
+            <a href="https://www.youtube.com/watch?v=SK-yO3qN-wc" target="_blank" class="btn btn-primary btn-sm" style="background: #E63946; border-color: #E63946; color: white;">
+              <i class="fa-brands fa-youtube"></i> 點擊前往觀看 YouTube 影片
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 交通指引與位置 Location & Map Section -->
+  <section class="section" id="location">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Venue Information</span>
+        <h2 class="section-title">研習地點與交通停車資訊</h2>
+        <p class="section-desc">研習地位於嘉義市大同國民小學，歡迎參閱以下資訊前往。</p>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-card">
+          <h3 style="margin-bottom: 1.5rem; color: var(--primary-dark);">研習會場詳細資訊</h3>
+          <ul class="location-details">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>研習地點：</strong><br>
+                嘉義市西區大同國民小學（大同樓 5 樓會議室）
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-map-pin"></i>
+              <div>
+                <strong>學校地址：</strong><br>
+                600 嘉義市西區成功街 15 號
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-square-parking"></i>
+              <div>
+                <strong>停車指引：</strong><br>
+                開車前往之學員可由校門口引導進入專用停車場，請參考右側停車地圖。
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="map-container">
+          <img src="學校停車地圖.png" alt="嘉義市大同國小學校停車地圖">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 燈箱視窗 Lightbox Modal -->
+  <div class="modal" id="lightbox-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="關閉預覽">&times;</button>
+      <img src="" alt="照片大圖預覽" class="modal-img" id="modal-img">
+    </div>
+  </div>
+
+  <!-- 頁尾 Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>嘉義市115學年度美學教師工作坊</h3>
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-light);">
+            【指導單位】教育部國民及學前教育署<br>
+            【主辦單位】嘉義市政府教育處<br>
+            【承辦單位】嘉義市國民教育輔導團 藝術學習領域<br>
+            【協辦單位】嘉義市西區大同國民小學
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>快速連結</h4>
+          <ul>
+            <li><a href="#overview">發展藍圖</a></li>
+            <li><a href="#agenda">課程行程</a></li>
+            <li><a href="#speakers">名師陣容</a></li>
+            <li><a href="#evaluation">成效評鑑</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>學員服務</h4>
+          <ul>
+            <li><a href="https://forms.gle/zC2kYpeTgAaG314t9" target="_blank">問卷表單</a></li>
+            <li><a href="#resources">講義下載</a></li>
+            <li><a href="#location">交通指引</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 嘉義市國民教育輔導團藝術領域輔導小組. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 載入邏輯控制腳本 -->
+  <script src="index.js"></script>
+</body>
+</html>
