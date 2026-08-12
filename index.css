@@ -1,0 +1,1185 @@
+/* ==========================================================================
+   嘉義市115學年度「美學教師工作坊」網站 - 設計系統與主樣式
+   Design System: Earthy Warmth & Refined Aesthetic Glassmorphism
+   ========================================================================== */
+
+:root {
+  /* 色彩系統 Color Palette */
+  --primary-color: #2D5A4C;        /* 深森林綠 Sage Teal */
+  --primary-light: #4A7C6D;
+  --primary-dark: #1E3D33;
+  --secondary-color: #D9825B;      /* 暖赤陶色 Warm Terracotta */
+  --secondary-hover: #C26E48;
+  --accent-gold: #D4A359;          /* 優雅金奢 Warm Gold */
+  
+  --bg-main: #FBF9F5;              /* 暖燕麥色 Warm Cream */
+  --bg-card: #FFFFFF;
+  --bg-card-translucent: rgba(255, 255, 255, 0.88);
+  --bg-dark-section: #1F2C27;
+  
+  --text-main: #2C3531;
+  --text-muted: #5C6B64;
+  --text-light: #8E9E96;
+  --text-on-dark: #F5F7F6;
+  
+  --border-color: #E2E8E4;
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-full: 9999px;
+  
+  /* 陰影與玻璃光澤 Shadows & Glassmorphism */
+  --shadow-sm: 0 4px 12px rgba(45, 90, 76, 0.05);
+  --shadow-md: 0 8px 24px rgba(45, 90, 76, 0.08);
+  --shadow-lg: 0 16px 40px rgba(45, 90, 76, 0.12);
+  --backdrop-blur: blur(12px);
+  
+  /* 漸層色 Gradients */
+  --gradient-hero: linear-gradient(135deg, rgba(45, 90, 76, 0.92) 0%, rgba(30, 61, 51, 0.96) 100%);
+  --gradient-accent: linear-gradient(135deg, #D9825B 0%, #D4A359 100%);
+  --gradient-card: linear-gradient(180deg, #FFFFFF 0%, #F8FAF9 100%);
+  
+  /* 字體 Fonts */
+  --font-serif: "Noto Serif TC", "Playfair Display", Georgia, serif;
+  --font-sans: "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* 過渡效果 Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 全域重置 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* 容器限制 Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* 區塊標準邊距 Section Spacing */
+.section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.section-dark {
+  background-color: var(--bg-dark-section);
+  color: var(--text-on-dark);
+}
+
+/* 標題系統 Headings */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  background-color: rgba(217, 130, 91, 0.1);
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--border-radius-full);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.75rem;
+}
+
+.section-dark .section-title {
+  color: #FFFFFF;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.section-dark .section-desc {
+  color: var(--text-light);
+}
+
+/* 按鈕系統 Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--border-radius-full);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: var(--gradient-accent);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(217, 130, 91, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(217, 130, 91, 0.45);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background: var(--primary-color);
+  color: #FFFFFF;
+}
+
+.btn-light {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: var(--backdrop-blur);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-light:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+/* 頂部導覽列 Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: var(--transition-normal);
+  padding: 1.2rem 0;
+}
+
+.navbar.scrolled {
+  background: rgba(251, 249, 245, 0.92);
+  backdrop-filter: var(--backdrop-blur);
+  padding: 0.8rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.logo-badge {
+  background: var(--primary-color);
+  color: #FFFFFF;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--border-radius-sm);
+}
+
+.logo-text {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-color);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  border-radius: 2px;
+}
+
+.nav-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+  cursor: pointer;
+}
+
+/* 主視覺區塊 Hero Section */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: var(--gradient-hero);
+  color: #FFFFFF;
+  padding: 8rem 0 5rem;
+  overflow: hidden;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 80% 20%, rgba(217, 130, 91, 0.25) 0%, transparent 50%),
+                    radial-gradient(circle at 10% 80%, rgba(212, 163, 89, 0.2) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-sub {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: var(--backdrop-blur);
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero-title {
+  font-size: 3.25rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.hero-title span {
+  color: var(--accent-gold);
+  display: block;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.hero-meta-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-meta-item h4 {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.hero-meta-item p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.hero-card-preview {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: var(--backdrop-blur);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.hero-card-badge {
+  position: absolute;
+  top: -15px;
+  right: 30px;
+  background: var(--secondary-color);
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: var(--border-radius-full);
+}
+
+.hero-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-card-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-card-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.hero-card-highlights i {
+  color: var(--accent-gold);
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+/* 核心願景與階段規劃 Vision & Stages */
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.vision-card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius-md);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-color);
+}
+
+.vision-card.active::before {
+  background: var(--secondary-color);
+}
+
+.vision-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.vision-stage-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.vision-card-title {
+  font-size: 1.35rem;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.vision-card-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.vision-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--text-main);
+}
+
+.vision-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vision-bullets i {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+}
+
+/* 課程大綱與場次 Agenda & Tabs */
+.agenda-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 1rem 1.8rem;
+  border-radius: var(--border-radius-full);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.tab-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.tab-btn.active {
+  background: var(--primary-color);
+  color: #FFFFFF;
+  border-color: var(--primary-color);
+  box-shadow: 0 6px 20px rgba(45, 90, 76, 0.25);
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.timeline-card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.timeline-topic {
+  font-size: 1.75rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.4rem;
+}
+
+.timeline-speaker {
+  font-size: 1.05rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.timeline-time-badge {
+  background: rgba(45, 90, 76, 0.08);
+  color: var(--primary-color);
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--border-radius-full);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-main);
+  border-radius: var(--border-radius-md);
+  transition: var(--transition-fast);
+}
+
+.timeline-item:hover {
+  background: #F2F6F4;
+}
+
+.timeline-time {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.timeline-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-detail {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+/* 講師陣容 Speaker Profiles */
+.speaker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.speaker-card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: var(--transition-normal);
+}
+
+.speaker-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.speaker-avatar-wrap {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 8px 20px rgba(217, 130, 91, 0.3);
+}
+
+.speaker-name {
+  font-size: 1.6rem;
+  color: var(--primary-dark);
+}
+
+.speaker-title {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.speaker-bio {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.speaker-quote {
+  background: #FAF6F0;
+  border-left: 3px solid var(--secondary-color);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: #5A4A3E;
+}
+
+/* Guskey 評鑑成效與滿意度 Metrics & Evaluation */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.metric-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: var(--backdrop-blur);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--border-radius-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: var(--transition-normal);
+}
+
+.metric-card:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-4px);
+}
+
+.metric-value {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 0.25rem;
+}
+
+.metric-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0.4rem;
+}
+
+.metric-sub {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.quotes-carousel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.quote-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.quote-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.quote-author {
+  font-size: 0.88rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+/* 活動精彩花絮 Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  background: #E8ECE9;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-normal);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(30, 61, 51, 0.85) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+  opacity: 0;
+  transition: var(--transition-normal);
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.08);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-caption {
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* 講義下載專區 Download Center */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.resource-card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  transition: var(--transition-normal);
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.resource-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--border-radius-sm);
+  background: rgba(45, 90, 76, 0.1);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.resource-info h4 {
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.4rem;
+}
+
+.resource-info p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* 交通指引與地圖 Location */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.location-card {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.location-details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.location-details li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  font-size: 1rem;
+}
+
+.location-details i {
+  color: var(--secondary-color);
+  font-size: 1.25rem;
+  margin-top: 2px;
+}
+
+.map-container {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  background: #FFFFFF;
+}
+
+.map-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 燈箱 Modal Lightbox */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: var(--backdrop-blur);
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  max-width: 900px;
+  max-height: 85vh;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.modal-close:hover {
+  background: var(--secondary-color);
+}
+
+/* 頁尾 Footer */
+.footer {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  padding: 4rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand h3 {
+  color: #FFFFFF;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links h4 {
+  color: #FFFFFF;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-sans);
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--accent-gold);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.85rem;
+}
+
+/* 承先啟後：歷年事蹟與演進軌跡 Milestone History Section */
+.history-timeline-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.history-stage-card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  margin-bottom: 2.5rem;
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.history-stage-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--primary-color);
+}
+
+.history-stage-card.era-mid::before {
+  background: var(--secondary-color);
+}
+
+.history-stage-card.era-late::before {
+  background: var(--accent-gold);
+}
+
+.history-stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.history-stage-title {
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+}
+
+.history-year-badge {
+  background: var(--primary-color);
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--border-radius-full);
+}
+
+.history-year-badge.mid {
+  background: var(--secondary-color);
+}
+
+.history-year-badge.late {
+  background: #C48B36;
+}
+
+.history-core-box {
+  background: #FAF6F0;
+  border-left: 3px solid var(--secondary-color);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+.history-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.history-course-item {
+  background: var(--bg-main);
+  border-radius: var(--border-radius-sm);
+  padding: 1rem;
+  font-size: 0.88rem;
+  border: 1px solid var(--border-color);
+}
+
+.history-course-cat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.history-course-name {
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+}
+
+.history-course-lecturer {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* 響應式調整 Responsive Design */
+@media (max-width: 992px) {
+  .hero-grid, .speaker-grid, .location-grid, .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .vision-grid, .metrics-grid, .quotes-carousel, .resource-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-main);
+    flex-direction: column;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-mobile-toggle {
+    display: block;
+  }
+
+  .vision-grid, .metrics-grid, .quotes-carousel, .resource-grid, .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-meta-list {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
