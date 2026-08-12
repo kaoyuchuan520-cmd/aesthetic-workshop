@@ -784,27 +784,26 @@ h1, h2, h3, h4 {
 
 .gallery-overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(30, 61, 51, 0.85) 100%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(26, 45, 38, 0.85) 100%);
   display: flex;
   align-items: flex-end;
-  padding: 1.25rem;
-  opacity: 0;
+  padding: 0.75rem 1rem;
+  opacity: 1;
   transition: var(--transition-normal);
 }
 
 .gallery-item:hover .gallery-img {
-  transform: scale(1.08);
-}
-
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
+  transform: scale(1.05);
 }
 
 .gallery-caption {
   color: #FFFFFF;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* 講義下載專區 Download Center */
