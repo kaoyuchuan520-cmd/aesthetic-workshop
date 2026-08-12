@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initAgendaTabs();
+  initHistoryTabs();
   initCounters();
 });
 
@@ -174,4 +175,28 @@ function initCounters() {
 /* 5. 講義與資源下載下載下載提示 (Simulated Resource Downloader) */
 function downloadResource(filename, title) {
   alert(`【下載通知】\n您正在下載：「${title}」\n系統即將為您開啟檔案連線！`);
+}
+
+
+/* 4. 歷年演進切換 History Timeline Stepper Switcher */
+function initHistoryTabs() {
+  const steps = document.querySelectorAll('.stepper-step');
+  const tabContents = document.querySelectorAll('.history-tab-content');
+
+  steps.forEach(step => {
+    step.addEventListener('click', () => {
+      const targetId = step.getAttribute('data-history-tab');
+
+      // 移除所有 active
+      steps.forEach(s => s.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+
+      // 啟用目前點擊的 step 與 content
+      step.classList.add('active');
+      const targetContent = document.getElementById(targetId);
+      if (targetContent) {
+        targetContent.classList.add('active');
+      }
+    });
+  });
 }
